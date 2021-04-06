@@ -1,0 +1,11 @@
+# JetBrains Configuration
+.idea/
+
+# OSX
+.DS_Store
+
+# Rust stuff
+/target/
+/build/
+/.rust/
+Cargo.lock
