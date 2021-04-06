@@ -1,9 +1,9 @@
 [package]
-name = "helloworld"
+name = "rustland"
 version = "0.0.1"
 authors = ["imthaghost <imthaghost@protonmail.com>"]
 keywords = ["rust"]
-description = "A place for learning Rust"
+description = "Just a place to house code while I learn Rust"
 license = "MIT"
 repository = "https://github.com/imthaghost/rustland.git"
 readme = "README.md"
