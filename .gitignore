@@ -2,10 +2,11 @@
 .idea/
 
 # OSX
-.DS_Store
+*.DS_Store
 
 # Rust stuff
-/target/
-/build/
-/.rust/
-Cargo.lock
+*/target/
+*/build/
+*/.rust/
+*Cargo.lock
+*.rustc_info.json
