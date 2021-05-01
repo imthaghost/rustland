@@ -5,8 +5,8 @@
 *.DS_Store
 
 # Rust stuff
-*/target/
-*/build/
-*/.rust/
-*Cargo.lock
-*.rustc_info.json
+*/*target/
+*/*build/
+*/*.rust/
+*/*Cargo.lock
+*/*.rustc_info.json
