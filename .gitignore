@@ -4,9 +4,9 @@
 # OSX
 *.DS_Store
 
-# Rust stuff
-*/*target/
-*/*build/
-*/*.rust/
-*/*Cargo.lock
-*/*.rustc_info.json
+# Rust stuff - match any subdirectory including root
+**/*target/
+**/*build/
+**/*.rust/
+**/*Cargo.lock
+**/*.rustc_info.json
