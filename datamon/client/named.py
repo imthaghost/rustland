@@ -24,7 +24,9 @@ if __name__ == "__main__":
             
             bytes = os.read(fifo, 1000)
             buf = BytesIO(bytes)
-            print(pd.read_feather(buf))
+            df = pd.read_feather(buf)
+
+            print(df)
             # macD
 
 

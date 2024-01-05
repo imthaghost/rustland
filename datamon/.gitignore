@@ -1,0 +1,8 @@
+# Build stuff
+/target/
+/build/
+/.rust/
+Cargo.lock
+client/bin
+client/include
+client/lib

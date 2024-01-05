@@ -24,14 +24,20 @@ fn tofile(mut f:&std::fs::File, data:&[u8]) {
 }
 
 // create a random data frame
-fn mkframe() -> DataFrame { 
+fn mkframe() -> DataFrame {
     let mut rng = rand::thread_rng();
-    // create random data frame
-    let a = UInt32Chunked::new_from_slice("a", &[rng.gen::<u32>(), rng.gen::<u32>(), rng.gen::<u32>()]).into_series();    
-    let b = Float64Chunked::new_from_slice("b", &[rng.gen::<f64>(), rng.gen::<f64>(), rng.gen::<f64>()]).into_series();
-    let df = DataFrame::new(vec![a, b]).unwrap();
-    return df
+
+    // Create vectors with random data
+    let a_values = vec![rng.gen::<u32>(), rng.gen::<u32>(), rng.gen::<u32>()];
+    let b_values = vec![rng.gen::<f64>(), rng.gen::<f64>(), rng.gen::<f64>()];
+
+    // Use new_from_vec to create ChunkedArrays
+    let a = UInt32Chunked::from_vec("a", a_values).into_series();
+    let b = Float64Chunked::from_vec("b", b_values).into_series();
+
+    DataFrame::new(vec![a, b]).unwrap()
 }
+
 
 fn main() {
     
